@@ -19,6 +19,7 @@ const i18n = new VueI18n({
     'en': require('./common/lang/en')    // 英文语言包
   }
 })
+
 /* eslint-disable no-new */
 new Vue({
   i18n,

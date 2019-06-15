@@ -1,18 +1,15 @@
-<template>
+<template xmlns:v-demo="http://www.w3.org/1999/xhtml">
   <div>
     <headerTop></headerTop>
-    <vOutline></vOutline>
     <vUser></vUser>
-    <vBusiness></vBusiness>
-    <vBusinessman></vBusinessman>
-    <vFinance></vFinance>
-    <vTechnology></vTechnology>
+    <vOutline></vOutline>
   </div>
 
 
 </template>
 
 <script>
+  import Vue from 'vue'
   import  headerTop from "../components/header.vue"
   import  vUser from "../components/user.vue"
   import  vOutline from "../components/outline.vue"
@@ -20,24 +17,20 @@
   import  vBusinessman from "../components/businessman.vue"
   import  vFinance from "../components/finance.vue"
   import  vTechnology from "../components/technology.vue"
-  export default {
-    name: 'home',
-    data () {
-      return {
-      }
-    },
-    methods: {
-    },
-    components:{
-      headerTop,
-      vOutline,
-      vBusiness,
-      vBusinessman,
-      vUser,
-      vFinance,
-      vTechnology
-    }
+
+import clickoutside from 'element-ui/src/utils/clickoutside.js';
+export default {
+  components:{
+    headerTop,
+    vUser,
+    vOutline,
+    vBusiness,
+    vBusinessman,
+    vFinance,
+    vTechnology
   }
+
+}
 
 </script>
 
@@ -46,5 +39,8 @@
   h1, h2 {
     font-weight: normal;
   }
-
+  .input { padding: 5px; margin: 0; border: 1px solid #beceeb; }
+  .clear { display: none; position: absolute; width: 16px; height: 16px; margin: 6px 0 0 -20px; ;}
+  .input::-ms-clear { display: none; }
+  .input:valid + .clear { display: inline; }
 </style>
